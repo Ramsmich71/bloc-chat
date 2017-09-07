@@ -9,6 +9,7 @@
       Room.add(this.newRoom);
       $uibModalInstance.close();
     };
+
   }
 
   angular

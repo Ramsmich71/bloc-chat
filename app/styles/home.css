@@ -51,11 +51,19 @@
   cursor: pointer;
 }
 
-.navbar h3 {
+.change-room-button {
   font-family: "Helvetica";
   font-weight: 300;
+  font-size: 25px;
   color: rgba(35, 22, 22, 0.9);
   margin-left: 15px;
+  bottom: 20px;
+  margin-top: 10px;
+}
+
+.change-room-button:hover {
+  color: White;
+  cursor: pointer;
 }
 
 .modal-box {
@@ -67,4 +75,24 @@
   left: 22%;
   height: 20%;
   width: 10%;
+}
+
+.messages .messages-header {
+  font-family: "Helvetica";
+  font-weight: 300;
+  color: rgba(35, 22, 22, 0.9);
+  position: fixed;
+  display: block;
+  top: 0px;
+  left: 22%;
+  height: 20%;
+  width: 10%;
+}
+
+.messages-body {
+  width: 100%;
+  margin-bottom: 50px;
+  align-self: flex-end;
+  overflow-y: scroll;
+  left: 22%;
 }

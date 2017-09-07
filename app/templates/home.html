@@ -1,7 +1,19 @@
-<div class="navbar">
-  <h1>Bloc Chat</h1>
-  <span class="new-room-button" type="button" ng-click="home.addRoom()">New Room</span>
-  <div ng-repeat="room in home.rooms">
-    <h3>{{ room.$value }}</h3>
+<section>
+  <div class="navbar">
+    <h1>Bloc Chat</h1>
+    <span class="new-room-button" type="button" ng-click="home.addRoom()">New Room</span>
+    <div ng-repeat="room in home.rooms">
+      <span class="change-room-button" type="button" ng-click="home.changeRoom(room)">{{ room.$value }}</span>
+    </div>
   </div>
-</div>
+  <div class="messages">
+    <div class="messages-header">
+      <h3>{{ home.currentRoom.$value }}</h3>
+    </div>
+    <div class='messages-body' ng-repeat='messages in home.messages track by $index'>
+      <div class="message-username">{{ message.username }}</div>
+      <div class="message-timestamp">{{ message.sentAt }}</div>
+      <div class="message-content">{{ message.content }}</div>
+    </div>
+  </div>
+</section>
